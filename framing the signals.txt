@@ -1,0 +1,5 @@
+
+
+
+FRAMING:
+A single audio signal is blocked into frames of N samples and succeeding will start after M samples, means there is overlap of N-M sammples.
