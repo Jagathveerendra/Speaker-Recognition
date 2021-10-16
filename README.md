@@ -16,7 +16,7 @@ A single audio signal is blocked into frames of N samples and succeeding will st
 <img width="792" alt="d7Rdx" src="https://user-images.githubusercontent.com/92499855/137594110-5141da60-3600-4c4f-bce7-59c33a17b1e1.png">
 
 # Mel frequency cepstral coefficients
-Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively make up an MFC. They are derived from a type of cepstral representation of the audio clip (a nonlinear "spectrum-of-a-spectrum"). The difference between the cepstrum and the mel-frequency cepstrum is that in the MFC, the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response. 
+Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively make up an MFC. They are derived from a type of cepstral representation of the audio clip. The difference between the cepstrum and the mel-frequency cepstrum is that in the MFC, the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response. Mfccs  shows more significant variation from speaker to speaker since they are derived on logarathamic scale that's why we have choosen mfccs.
 # Linear prediction coefficients
 LPCs are another popular feature for speaker recognition. To understand LPCs, we must first understand the Autoregressive model of speech. Speech can be modelled as a pth order AR process.These coefficeients give characteristics of input audio signal.
 # LBG(Linde-Buzo-Gray)algorithm
