@@ -28,6 +28,7 @@ The energy of signals entraped in this filters respectively gives mfccs.The fina
 5) Now do the dot product between power series and transform of filter bank, filter bank energies were obtained.
 6) Apply logarithm and discrete cosine transform to the filter bank energies.
 7) These are  26 mfccs but only 1 to 13 mfccs were required. Take only 1 to 13 mfccs and leave the others.
+All these steps are arranged in mfcc_final function.
 # Linear prediction coefficients
 LPCs are another popular feature for speaker recognition. To understand LPCs, we must first understand the Autoregressive model of speech. Speech can be modelled as a pth order AR process, where each sample is given by:LPCs are another popular feature for speaker recognition. To understand LPCs, we must first understand the Autoregressive model of speech. Speech can be modelled as a pth order AR process, where each sample is given by:
 
@@ -44,12 +45,57 @@ followimg are the steps required:
 3) Create yule wlaker symmetric matrix by using output array obtained in auto correlation function(this is a function generating yule walker symmetric matrix)
 4) LPCS are result of dot product between inverse of yule walker symmetric matrix and matrix obtained in auto correlation function.
 # LBG(Linde-Buzo-Gray) algorithm
-LBG algorithm is used to generate codebook for respective speaker's audio signals
+LBG algorithm is used to generate codebook for respective speaker's audio signals.
+
+![image](https://user-images.githubusercontent.com/92499855/137582517-65127a8f-14ce-489c-b97c-46f7d26f3777.png)
 
 
+Since LBG algorithm contains lot of steps divide each step into a function.
+## Code book splitting
+1) The function cb_splitting takes current codebook as input.
+2) By using a while loop this function splits each vector in the codebook into two new vectors based on the given threshold value.
+3) It finally returns a new codebook with size two times of the input codebook.
+## Clustering data(mfccs or lpcs)
+The function cluster_vectors(data,codebooks,m) takes mfccs/lpcs,current codebook and current value of 'm'.
+1) Using nested for loops the distance between  each vector and code words are calculated and stored in a list.
+2) Using sort function for each vector nearest code word is determined.
+3) This function returns list of tuples and tuple format is ( index of code word, min distance, acoustic vector).
+4) This function also returns mean distortion for data and codebook.
+5) Outputs of this function is used to calculate centroids for resepective clusters.( totally m clusters will be obtained)
 
+## Finding centroids for clustered data
+ The function finding_centroids(clustervec,codebooks,m,z) takes clustered vectors list(output of cluster_vectors function),codebook, current value of m and length of acoustic vectors as inputs.
+ 1) There are totally 'm' clusters in the cluster_vectors list.
+ 2) Mean of each and every cluster is calculated (centroids).
+ 3) Now this centroids together form a new updated code book which is output of this function.
 
+## Calculating mean distortion
+The function distortion(data,codebooks,m) takes mfccs or lpcs, current codebook and currrent value of m as inputs.
+1) With help of nested for loops the distance between acoustic vector and codewords is calculated and stored in a list.
+2) By using sort function minmum distance is derived and added to a distortion(a variable).
+3) Repeat same procedure for all acoustic vectors 
+4) To obtain mean_distortion the distortion is divided with number of acoustic vectors.
 
+As given in LBG algorithm picture these four functions are arranged using two while loops.
+# Training 
+In training codebooks for each and every speaker is derived.
+OS is imported to obatin names of the audio files
+1) By using directories we will get access to training data set.
+2) First of all input audio signal is readed using wavfile.read function.
+3) Now input signal is blocked into frames using framing function.
+4) For this frames mfccs and lpcs are calculated and stored in seperate lists.
+5) mfccs and lpcs are passed to lbg algorithm inorder to obtain their codebooks and these codebooks are also appended to two seperate lists.
+6) Above stated steps are repeated for each and every speaker in tarning set using a for loop.
+# Testing
+The unknown audio signals in testing data sets are matched with their speakers in training data sets.
+1) By using directories we will get access to testing data set.
+2) First of all input audio signal is readed using wavfile.read function.
+3) Now input signal is blocked into frames using framing function.
+4) For this frames mfccs and lpcs are calculated and appended in seperate lists.
+5) Above steps are repeated for all unknown audio signals using for loop.
+6) Now distortion between mfccs and codebooks are calculated.
+7) Find for which code book minimum distortion is occuring and conclude that codebook speaker and current unknown speaker are same.(speaker identification)
+8) Repeat 6,7 steps with lpcs also.
 
 
 
