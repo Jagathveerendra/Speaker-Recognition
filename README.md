@@ -51,11 +51,11 @@ LBG algorithm is used to generate codebook for respective speaker's audio signal
 
 
 Since LBG algorithm contains lot of steps divide each step into a function.
-## Code book splitting
+### Code book splitting
 1) The function cb_splitting takes current codebook as input.
 2) By using a while loop this function splits each vector in the codebook into two new vectors based on the given threshold value.
 3) It finally returns a new codebook with size two times of the input codebook.
-## Clustering data(mfccs or lpcs)
+### Clustering data(mfccs or lpcs)
 The function cluster_vectors(data,codebooks,m) takes mfccs/lpcs,current codebook and current value of 'm'.
 1) Using nested for loops the distance between  each vector and code words are calculated and stored in a list.
 2) Using sort function for each vector nearest code word is determined.
@@ -63,13 +63,13 @@ The function cluster_vectors(data,codebooks,m) takes mfccs/lpcs,current codebook
 4) This function also returns mean distortion for data and codebook.
 5) Outputs of this function is used to calculate centroids for resepective clusters.( totally m clusters will be obtained)
 
-## Finding centroids for clustered data
+### Finding centroids for clustered data
  The function finding_centroids(clustervec,codebooks,m,z) takes clustered vectors list(output of cluster_vectors function),codebook, current value of m and length of acoustic vectors as inputs.
  1) There are totally 'm' clusters in the cluster_vectors list.
  2) Mean of each and every cluster is calculated (centroids).
  3) Now this centroids together form a new updated code book which is output of this function.
 
-## Calculating mean distortion
+### Calculating mean distortion
 The function distortion(data,codebooks,m) takes mfccs or lpcs, current codebook and currrent value of m as inputs.
 1) With help of nested for loops the distance between acoustic vector and codewords is calculated and stored in a list.
 2) By using sort function minmum distance is derived and added to a distortion(a variable).
