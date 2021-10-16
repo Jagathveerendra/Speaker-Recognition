@@ -20,9 +20,8 @@ Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively m
 # Linear prediction coefficients
 LPCs are another popular feature for speaker recognition. To understand LPCs, we must first understand the Autoregressive model of speech. Speech can be modelled as a pth order AR process.These coefficeients give characteristics of input audio signal.
 # LBG(Linde-Buzo-Gray)algorithm
-Linde-Buzo-Gray (LBG) Algorithm is used for designing of Codebook efficiently which has minimum distortion and error.It is an iterative procedure and the basic idea is to divide the group of training vectors and use it to find the most representative vector from one group. These representative vectors from each group are gathered to form the codebook.
+Linde-Buzo-Gray (LBG) Algorithm is used for designing of Codebook efficiently which has minimum distortion and error.It is an iterative procedure and the basic idea is to divide the group of training vectors and use it to find the most representative vector from one group. These representative vectors from each group are gathered to form the codebook. Since codebook derived from LBG shows min distortion we have choosen this.
 
-![LBG-algorithm-1-Plan-a-1-vector-codebook-This-is-the-centroid-of-the-whole-arrangement](https://user-images.githubusercontent.com/92499855/137594525-9cda13f8-ae9d-4e91-8d77-0203b8657693.png)
 
 # Training 
 In training codebooks for known speakers were derived. These are the steps followed
