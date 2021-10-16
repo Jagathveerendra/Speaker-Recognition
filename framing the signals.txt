@@ -1,7 +1,0 @@
-First of all we import wav file from scipy.io so that by using wavfile.read we convert audio signal into a numpy array
-FRAMING 
-A single audio signal is blocked into frames of N samples and succeeding will start after M samples, means there is overlap of N-M sammples.
-steps required:
-1A function named framing is defined such that it takes sampling frequency, numpy array of a audio signal, frame size and frame start as inputs.
-In this function signal is padded with zeros so that the function is evenly divided into frames with N samples each. Now using  for loop and with techniques of python indexing the whole numpy array is blocked into frames.
-
