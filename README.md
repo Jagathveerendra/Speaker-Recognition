@@ -8,7 +8,7 @@ identity.  By checking the voice characteristics of the input utterance, using a
 able to add an extra level of security.
 ![image](https://user-images.githubusercontent.com/92499855/137593881-06a6708a-43bf-4cec-bb01-7f21da458ae5.png)
 
-This project contains framing of signal, mel cepstral coefficients, linear prediction coefficients, lbg algorithm and finally feature matching
+This project contains framing of signal, mel cepstral coefficients, linear prediction coefficients, lbg algorithm for feature matching
 
 # FRAMING OF SIGNAL
 A single audio signal is blocked into frames of N samples and succeeding will start after M samples, means there is overlap of N-M sammples.
@@ -16,12 +16,9 @@ A single audio signal is blocked into frames of N samples and succeeding will st
 <img width="792" alt="d7Rdx" src="https://user-images.githubusercontent.com/92499855/137594110-5141da60-3600-4c4f-bce7-59c33a17b1e1.png">
 
 # Mel frequency cepstral coefficients
-Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively make up an MFC. They are derived from a type of cepstral representation of the audio clip (a nonlinear "spectrum-of-a-spectrum"). The difference between the cepstrum and the mel-frequency cepstrum is that in the MFC, the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response more closely than the linearly-spaced frequency bands used in the normal spectrum.Mel spectrogram is pictorial representation of sound.
-![1_pzE4i1TXaLCmzTXgdxFZjQ](https://user-images.githubusercontent.com/92499855/137594287-00a5c781-cf44-4d12-8b19-c66eeac5cd34.jpeg)
-
+Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively make up an MFC. They are derived from a type of cepstral representation of the audio clip (a nonlinear "spectrum-of-a-spectrum"). The difference between the cepstrum and the mel-frequency cepstrum is that in the MFC, the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response. 
 # Linear prediction coefficients
-LPCs are another popular feature for speaker recognition. To understand LPCs, we must first understand the Autoregressive model of speech. Speech can be modelled as a pth order AR process. LPCs are another popular feature for speaker recognition. To understand LPCs, we must first understand the Autoregressive model of speech.
-
+LPCs are another popular feature for speaker recognition. To understand LPCs, we must first understand the Autoregressive model of speech. Speech can be modelled as a pth order AR process.These coefficeients give characteristics of input audio signal.
 # LBG(Linde-Buzo-Gray)algorithm
 Linde-Buzo-Gray (LBG) Algorithm is used for designing of Codebook efficiently which has minimum distortion and error.It is an iterative procedure and the basic idea is to divide the group of training vectors and use it to find the most representative vector from one group. These representative vectors from each group are gathered to form the codebook.
 
