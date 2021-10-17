@@ -4,7 +4,7 @@ to use the speaker's voice to verify their identity and control access to mobile
 For example, users have to speak a PIN (Personal Identification Number) in order to gain access to the laboratory door, or users have to speak their credit card number over the telephone line to verify their identity.  By checking the voice characteristics of the input utterance, using an automatic speaker recognition system similar to the one that we will describe, the system is able to add an extra level of security.
 ![image](https://user-images.githubusercontent.com/92499855/137593881-06a6708a-43bf-4cec-bb01-7f21da458ae5.png)
 
-This project contains framing of signal, mel cepstral coefficients, linear prediction coefficients, lbg algorithm for feature matching
+This project contains framing of signal, mel frequency cepstral coefficients and linear prediction coefficients for feature extraction, lbg algorithm for feature matching.
 
 # FRAMING OF SIGNAL
 A single audio signal is blocked into frames of N samples and succeeding will start after M samples, means there is overlap of N-M sammples.
