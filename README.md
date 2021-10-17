@@ -1,11 +1,7 @@
 # Speaker-Recognition
 Speaker recognition is the process of automatically recognizing who is speaking on the basis of individual information included in speech waves. This technique makes it possible
-to use the speaker's voice to verify their identity and control access to services such as voice dialing, banking by telephone, telephone shopping, database access services, 
-information services, voice mail, security control for confidential information areas, and remote access to computers.This document describes how to build a simple, yet complete 
-and representative automatic speaker recognition system.  Such a speaker recognition system has potential in many security applications.  For example, users have to speak a 
-PIN (Personal Identification Number) in order to gain access to the laboratory door, or users have to speak their credit card number over the telephone line to verify their 
-identity.  By checking the voice characteristics of the input utterance, using an automatic speaker recognition system similar to the one that we will describe, the system is 
-able to add an extra level of security.
+to use the speaker's voice to verify their identity and control access to mobile, a data set,bank accounts and in many security applications.  
+For example, users have to speak a PIN (Personal Identification Number) in order to gain access to the laboratory door, or users have to speak their credit card number over the telephone line to verify their identity.  By checking the voice characteristics of the input utterance, using an automatic speaker recognition system similar to the one that we will describe, the system is able to add an extra level of security.
 ![image](https://user-images.githubusercontent.com/92499855/137593881-06a6708a-43bf-4cec-bb01-7f21da458ae5.png)
 
 This project contains framing of signal, mel cepstral coefficients, linear prediction coefficients, lbg algorithm for feature matching
@@ -43,31 +39,10 @@ After the whole training process is completed we now test our model on unseen da
 8) Repeat 6,7 steps with lpcs also.
 # Results
 ### with mfccs (on a small data set)
-CantinaBand3.wav is an imposter and min distortion obtained is  35.682684442694686.  
-preamble.wav is an imposter and min distortion obtained is  51.289708061181415.  
-s1.wav is matching with s1.wav.  
-s2.wav is matching with s2.wav.  
-s3.wav is matching with s3.wav.  
-s4.wav is matching with s4.wav.  
-s5.wav is matching with s5.wav.  
-s6.wav is matching with s6.wav.  
-s7.wav is matching with s7.wav.  
-s8.wav is matching with s8.wav.  
-hlo.wav is an imposter and min distortion obtained is  39.99087208226558.  
-accuracy is 100%.
+When feature matching is carried on mfccs the accuracy of our model is 94%. With mffcs false acceptance and rejection errors were quite low.
 ### with lpcs (on a small data set)
-CantinaBand3.wav is matching with s6.wavdistortion is 0.5286803207154015.  
-preamble.wav is matching with s6.wavdistortion is 0.5364160083938064.  
-s1.wav is matching with s1.wavdistortion is 0.6027632594509406.  
-s2.wav is matching with s2.wavdistortion is 0.6032151789313441.  
-s3.wav is matching with s3.wavdistortion is 0.40566458090020546.  
-s4.wav is matching with s4.wavdistortion is 0.4295005610203914.  
-s5.wav is matching with s5.wavdistortion is 0.4759311723269076.  
-s6.wav is matching with s6.wavdistortion is 0.3966163272334043.  
-s7.wav is matching with s7.wavdistortion is 0.49357017233170875.  
-s8.wav is matching with s8.wavdistortion is 0.4767425609636654.  
-hlo.wav is matching with s2.wavdistortion is 0.6624632281338751.  
-accuracy is 73%.
+When feature matching is carried on lpcs the accuracy of our model is 73%. False acceptance error is high for lpcs.
+
 
 
 
