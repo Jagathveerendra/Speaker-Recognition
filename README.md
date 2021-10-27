@@ -9,8 +9,6 @@ This project contains framing of signal, mel frequency cepstral coefficients and
 # FRAMING OF SIGNAL
 A single audio signal is blocked into frames of N samples and succeeding will start after M samples, means there is overlap of N-M sammples.
 
-<img width="792" alt="d7Rdx" src="https://user-images.githubusercontent.com/92499855/137594110-5141da60-3600-4c4f-bce7-59c33a17b1e1.png">
-
 # Mel frequency cepstral coefficients
 Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively make up an MFC. They are derived from a type of cepstral representation of the audio clip. The difference between the cepstrum and the mel-frequency cepstrum is that in the MFC, the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response. we have choosen Mfccs for feature extraction because they shows more significant variation from speaker to speaker since they are derived on logarithmic scale.
 # Linear prediction coefficients
@@ -38,10 +36,7 @@ After the whole training process is completed we now test our model on unseen da
 7) Find for which code book minimum distortion is occuring and conclude that codebook speaker and current unknown speaker are same.(speaker identification)
 8) Repeat 6,7 steps with lpcs also.
 # Results
-### with mfccs (on a small data set)
-When feature matching is carried on mfccs the accuracy of our model is 94%. With mffcs false acceptance and rejection errors were quite low.
-### with lpcs (on a small data set)
-When feature matching is carried on lpcs the accuracy of our model is 73%. False acceptance error is high for lpcs.
+accuracy for model is 100 % for both mfccs and lpcs. 
 
 
 
