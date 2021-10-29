@@ -19,11 +19,13 @@ Linde-Buzo-Gray (LBG) Algorithm is used for designing of Codebook efficiently wh
 
 
 ### Training and Testing
-Model is trained over data sets (find codebooks).  
-We will feed the model with testing data sets and find out which speakers from training data sets are matching with testing data sets respectively. 
+Model is trained over data sets (finding codebooks).  
+Feed the model with testing data sets and find out which speakers from training data sets are matching with testing data sets respectively. 
 
 ### Results
-Accuracy for model is 100 % for both mfccs and lpcs. 
+Accuracy for model is 100 % for both mfccs and lpcs on 8 speakers data set.
+### Note
+Model show errors for a audio signal containing a silent part.
 ### References
 1) Introduction to [speaker recognition project](https://minhdo.ece.illinois.edu/teaching/speaker_recognition/speaker_recognition.html)
 2) [MFCC](http://www.practicalcryptography.com/miscellaneous/machine-learning/guide-mel-frequency-cepstral-coefficients-mfccs/)
