@@ -3,7 +3,7 @@ Speaker recognition is the process of automatically recognizing who is speaking 
 
 ![image](https://user-images.githubusercontent.com/92499855/137593881-06a6708a-43bf-4cec-bb01-7f21da458ae5.png)
 
-### Pipeline of project:
+### Workflow of project:
 1) Pre-processing of input audio signal
 2) Feature extraction (MFCC OR LPC)
 3) Feature matching with LBG
