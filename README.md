@@ -11,11 +11,17 @@ Speaker recognition is the process of automatically recognizing who is speaking 
 5) Testing 
 
 ### Mel frequency cepstral coefficients
-Mel-frequency cepstral coefficients (MFCCs) are coefficients that collectively make up an MFC. The difference between the cepstrum and the mel-frequency cepstrum is that in the MFC, the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response. We have choosen Mfccs for feature extraction because they shows more significant variation from speaker to speaker since they are derived on logarithmic scale.
+* MFCCs are derived from a type of cepstral representation of the audio clip.  
+* The difference between the cepstrum and the mel-frequency cepstrum is that in the MFC, the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response.  
+* We have choosen Mfccs for feature extraction because they shows more significant variation from speaker to speaker since they are derived on logarithmic scale.
 ### Linear prediction coefficients
-LPCs are another popular feature for speaker recognition. To understand LPCs, we must first understand the Autoregressive model of speech. Speech can be modelled as a pth order AR process.These coefficeients give characteristics of input audio signal.
+* LPCs are another popular feature for speaker recognition. To understand LPCs, we must first understand the Autoregressive model of speech.  
+* Speech can be modelled as a pth order AR process.These coefficeients give characteristics of input audio signal.
 ### LBG(Linde-Buzo-Gray)algorithm
-Linde-Buzo-Gray (LBG) Algorithm is used for designing of Codebook efficiently which has minimum distortion and error.It is an iterative procedure and the basic idea is to divide the group of training vectors and use it to find the most representative vector from one group. These representative vectors from each group are gathered to form the codebook. Since codebook derived from LBG shows min distortion we have choosen this.
+* Linde-Buzo-Gray (LBG) Algorithm is used for designing of Codebook efficiently which has minimum distortion and error.  
+* It is an iterative procedure and the basic idea is to divide the group of training vectors and use it to find the most representative vector from one group. 
+* These representative vectors from each group are gathered to form the codebook. 
+* Since codebook derived from LBG shows min distortion we have choosen this.
 
 
 ### Training and Testing
@@ -33,7 +39,7 @@ Model show errors for a audio signal containing a silent part.
 4) [LPC reference slides](https://docs.google.com/presentation/d/1hBIF-j9fH92bnA72nzNQhTr5RXCcIK7AA-e6LIHX4Hw/edit#slide=id.gf4f26d30c1_0_13)
 5) [K means clustering](https://github.com/CihanBosnali/Machine-Learning-without-Libraries/blob/master/K-Means-Clustering/K-Means-Clustering-without-ML-libraries.ipynb)
 6) [complete project code reference](https://ccrma.stanford.edu/~orchi/Documents/speaker_recognition_report.pdf)
-7) [Basics of signal preocesssing videos](https://youtube.com/playlist?list=PLJ-OcUCIty7evBmHvYRv66RcuziszpSFB)
+7) [Basics of signal processing videos](https://youtube.com/playlist?list=PLJ-OcUCIty7evBmHvYRv66RcuziszpSFB)
 
 
 
