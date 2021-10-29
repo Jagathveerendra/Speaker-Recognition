@@ -33,6 +33,7 @@ Model show errors for a audio signal containing a silent part.
 4) [LPC reference slides](https://docs.google.com/presentation/d/1hBIF-j9fH92bnA72nzNQhTr5RXCcIK7AA-e6LIHX4Hw/edit#slide=id.gf4f26d30c1_0_13)
 5) [K means clustering](https://github.com/CihanBosnali/Machine-Learning-without-Libraries/blob/master/K-Means-Clustering/K-Means-Clustering-without-ML-libraries.ipynb)
 6) [complete project code reference](https://ccrma.stanford.edu/~orchi/Documents/speaker_recognition_report.pdf)
+7) [Basics of signal preocesssing videos](https://youtube.com/playlist?list=PLJ-OcUCIty7evBmHvYRv66RcuziszpSFB)
 
 
 
