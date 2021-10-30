@@ -9,19 +9,22 @@ Speaker recognition is the process of automatically recognizing who is speaking 
 3) Feature matching with LBG
 4) Training 
 5) Testing 
+### Data
+* The eight speakers data set were taken from [CSTR VCTK Corpus](https://datashare.ed.ac.uk/handle/10283/3443)
+* In every audio file speakers utter "Please call stella".
 
 ### Mel frequency cepstral coefficients
 * MFCCs are derived from a type of cepstral representation of the audio clip.  
-* The difference between the cepstrum and the mel-frequency cepstrum is that in the MFC, the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response.  
-* We have choosen Mfccs for feature extraction because they shows more significant variation from speaker to speaker since they are derived on logarithmic scale.
+* In MFCC the frequency bands are equally spaced on the mel scale, which approximates the human auditory system's response.  
+* We have chosen MFCCs for feature extraction because they shows more significant variation from speaker to speaker since they are derived on logarithmic scale.
 ### Linear prediction coefficients
 * LPCs are another popular feature for speaker recognition. To understand LPCs, we must first understand the Autoregressive model of speech.  
-* Speech can be modelled as a pth order AR process.These coefficeients give characteristics of input audio signal.
+* Speech can be modelled as a pth order AR process. These coefficients give characteristics of input audio signal.
 ### LBG(Linde-Buzo-Gray)algorithm
 * Linde-Buzo-Gray (LBG) Algorithm is used for designing of Codebook efficiently which has minimum distortion and error.  
 * It is an iterative procedure and the basic idea is to divide the group of training vectors and use it to find the most representative vector from one group. 
 * These representative vectors from each group are gathered to form the codebook. 
-* Since codebook derived from LBG shows min distortion we have choosen this.
+* Since codebook derived from LBG shows minimum distortion we have chosen this.
 
 
 ### Training and Testing
@@ -29,7 +32,7 @@ Model is trained over data sets (finding codebooks).
 Feed the model with testing data sets and find out which speakers from training data sets are matching with testing data sets respectively. 
 
 ### Results
-Accuracy for model is 100 % for both mfccs and lpcs on 8 speakers data set.
+Accuracy for model is 100 % for both mfccs and lpcs on CSTR VCTK Corpus data set.
 ### Note
 Model show errors for a audio signal containing a silent part.
 ### References
